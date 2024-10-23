@@ -1,0 +1,53 @@
+Step 1: Initialize a new Node.js project
+-----------------------------------------
+npm init -y
+# This command initializes a new Node.js project with default settings. 
+# It generates a package.json file that will keep track of dependencies and scripts for your project.
+
+
+Step 2: Install required packages
+-----------------------------------------
+npm install express cookie-parser mailtrap bcryptjs dotenv jsonwebtoken mongoose crypto
+# This installs the necessary dependencies:
+# - express: Framework for building the server.
+# - cookie-parser: Middleware to handle cookies in requests.
+# - mailtrap: Service to simulate email sending in development.
+# - bcryptjs: Library to hash passwords.
+# - dotenv: To manage environment variables from a .env file.
+# - jsonwebtoken: For creating and verifying JWT tokens.
+# - mongoose: For interacting with MongoDB.
+# - crypto: To generate secure random values, often used for token generation.
+
+
+Step 3: Install nodemon for automatic server restarts
+--------------------------------------------------------
+npm i nodemon -D
+# Nodemon is a development dependency (-D) that automatically restarts your server 
+# when file changes are detected, making development easier.
+
+
+Step 4: Update package.json to support ES modules
+-------------------------------------------------
+"type": "module",
+# Add this line in the package.json file to enable ES module support 
+# so you can use 'import' and 'export' syntax instead of 'require'.
+
+
+Step 5: Set the entry point for your application
+-------------------------------------------------
+"main": "backend/index.js",
+# This line in package.json defines the entry point for your application. 
+# In this case, the application will start from backend/index.js.
+
+
+Step 6: Add a development script
+---------------------------------
+"dev": "nodemon backend/index.js"
+# Add this script to package.json under "scripts" section.
+# This command will run the server using nodemon, so the server restarts automatically whenever you make changes.
+
+Username : devnickverma
+DB password : dz1YIK5JH6uHIKdS
+DB URL : mongodb+srv://devnickverma:dz1YIK5JH6uHIKdS@cluster0.ht2wm.mongodb.net/
+
+npm run dev :- To run the file
